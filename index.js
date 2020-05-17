@@ -17,25 +17,20 @@ var fs = require('fs');
             apiKey: key,
         })
     
-        // // Does index already exist, if so delete it
-        // let index = await client.listIndexes();
-        // index.forEach(function(item) {
-        //     if(item.name == indexName) {
-        //         let posts = client.getIndex(indexName)
-        //         posts.deleteIndex()
-        //     }
-        // })
+        // Does index already exist, if so delete it
+        let index = await client.listIndexes();
+        index.forEach(function(item) {
+            if(item.name == indexName) {
+                let posts = client.getIndex(indexName)
+                posts.deleteIndex()
+            }
+        })
     
         index = await client.createIndex({ uid: indexName, primaryKey: 'id' })
         const searchIndex = await JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
         const response = await index.addDocuments(searchIndex);
-        return searchIndex;
-        
-        // console.log(response)
     
     } catch (error) {
-      return error.message;
+      core.setFailed(error.message);
     }    
-}).then(function(data) {
-    console.log(data)
 });
