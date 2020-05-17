@@ -1,0 +1,2 @@
+# hugo-meilisearch-action
+ 
