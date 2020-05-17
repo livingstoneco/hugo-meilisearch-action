@@ -4,6 +4,9 @@
   "description": "",
   "main": "deploy-search-index.js",
   "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/exec": "^1.0.4",
+    "@actions/github": "^2.2.0",
     "meilisearch": "^0.10.0"
   },
   "devDependencies": {},

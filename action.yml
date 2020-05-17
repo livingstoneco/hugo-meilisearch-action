@@ -1,0 +1,14 @@
+name: 'Deploy Search Index'
+description: 'Deploy search index to MeiliSearch instance'
+inputs:
+  key:  # id of input
+    description: 'API Private Key'
+    required: true
+    default: ''
+  host:  # id of input
+    description: 'API Host'
+    required: true
+    default: ''
+runs:
+  using: 'node12'
+  main: 'index.js'
