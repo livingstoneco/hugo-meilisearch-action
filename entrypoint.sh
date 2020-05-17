@@ -1,7 +1,7 @@
 #!/bin/sh -l
 
 apt-get update
-apt-get install git curl -y
+apt-get install git curl gcc -y
 
 curl -O https://dl.google.com/go/go1.14.3.linux-amd64.tar.gz
 tar xvf go1.14.3.linux-amd64.tar.gz
@@ -13,3 +13,4 @@ export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
 git clone https://github.com/gohugoio/hugo.git
 cd hugo
 go install --tags extended
+hugo --minify
