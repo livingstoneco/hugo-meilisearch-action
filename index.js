@@ -20,7 +20,7 @@ var fs = require('fs');
         let index = await client.listIndexes();
         index.forEach(function(item) {
             if(item.name == indexName) {
-                let posts = client.getIndex(indexName)
+                let posts = await client.getIndex(indexName)
                 posts.deleteIndex()
             }
         })
