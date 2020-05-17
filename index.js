@@ -2,9 +2,9 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const exec = require('@actions/exec');
 const MeiliSearch = require('meilisearch');
-var fs = require('fs');
+const fs = require('fs');
 
-return = (async () => {
+let result = (async () => {
     try {
         const key = core.getInput('key')
         const host = core.getInput('host')
@@ -36,4 +36,4 @@ return = (async () => {
     }    
 });
 
-console.log(return);
+console.log(result);
