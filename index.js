@@ -37,5 +37,5 @@ var fs = require('fs');
       return error.message;
     }    
 }).then(function(data) {
-
+    console.log(data)
 });
