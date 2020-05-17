@@ -6,9 +6,10 @@ inputs:
     required: true
     default: ''
   host:  # id of input
-    description: 'MeiliSearch Host Addre4ss'
+    description: 'MeiliSearch Host Address'
     required: true
     default: ''
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: 'node12'
+  main: 'index.js'
+
