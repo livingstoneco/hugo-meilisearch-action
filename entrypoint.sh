@@ -1,7 +1,7 @@
 #!/bin/sh -l
 
-apt update
-apt install git
+apt-get update
+apt-get install git curl -y
 
 curl -O https://dl.google.com/go/go1.14.3.linux-amd64.tar.gz
 tar xvf go1.14.3.linux-amd64.tar.gz
