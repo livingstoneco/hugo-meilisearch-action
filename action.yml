@@ -12,7 +12,12 @@ inputs:
   indexName:  # id of input
     description: 'Search Index Name'
     required: true
-    default: ''
+    default: 'posts'
+outputs:
+  index: # id of output
+    description: 'Displays index'
+  updateId: # id of output
+    description: 'Displays index' update id
 runs:
   using: 'node12'
   main: 'index.js'
