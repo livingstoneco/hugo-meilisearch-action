@@ -17,8 +17,8 @@ try {
     // Does index already exist, if so delete it
     let index = await client.listIndexes();
 	index.forEach(function(item) {
-		if(item.name == 'posts') {
-			let posts = client.getIndex('posts')
+		if(item.name == indexName) {
+			let posts = client.getIndex(indexName)
 			posts.deleteIndex()
 		}
 	})
@@ -31,5 +31,3 @@ try {
 } catch (error) {
   core.setFailed(error.message);
 }
-
-
