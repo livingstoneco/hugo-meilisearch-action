@@ -5,8 +5,8 @@ const MeiliSearch = require('meilisearch');
 var fs = require('fs');
 
 ;(async () => {
-    await exec.exec('ls -la');
-
+    const ls = await exec.exec('ls -la')
+    console.log(ls)
     try {
         const key = core.getInput('key')
         const host = core.getInput('host')
