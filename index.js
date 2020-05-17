@@ -28,6 +28,7 @@ var fs = require('fs');
         index = await client.createIndex({ uid: indexName, primaryKey: 'id' })
         const searchIndex = await JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
         const response = await index.addDocuments(searchIndex);
+        console.log(searchIndex)
         console.log(response) // => { "updateId": 0 }
     
     } catch (error) {
