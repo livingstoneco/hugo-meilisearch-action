@@ -1,0 +1,23 @@
+{
+  "name": "hugo-meilisearch-action",
+  "version": "1.0.0",
+  "description": "",
+  "main": "deploy-search-index.js",
+  "dependencies": {
+    "meilisearch": "^0.10.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/livingstoneco/hugo-meilisearch-action.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/livingstoneco/hugo-meilisearch-action/issues"
+  },
+  "homepage": "https://github.com/livingstoneco/hugo-meilisearch-action#readme"
+}
