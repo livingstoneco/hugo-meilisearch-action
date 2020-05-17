@@ -1,14 +1,14 @@
 name: 'Deploy Search Index'
-description: 'Deploy search index to MeiliSearch instance'
+description: 'Deploy Hugo Search Index to MeiliSearch Instance'
 inputs:
   key:  # id of input
-    description: 'API Private Key'
+    description: 'MeiliSearch Private API Key'
     required: true
     default: ''
   host:  # id of input
-    description: 'API Host'
+    description: 'MeiliSearch Host Addre4ss'
     required: true
     default: ''
 runs:
-  using: 'node12'
-  main: 'index.js'
+  using: 'docker'
+  image: 'Dockerfile'
