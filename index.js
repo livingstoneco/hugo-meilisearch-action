@@ -5,7 +5,7 @@ const MeiliSearch = require('meilisearch');
 var fs = require('fs');
 
 // ;(async () => {
-    const ls = exec.exec('ls -la')
+    const ls = exec.exec('ls -la docs')
     console.log(ls)
     // try {
     //     const key = core.getInput('key')
