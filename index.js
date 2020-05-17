@@ -32,7 +32,7 @@ let result = (async () => {
         return {searchIndex}
     
     } catch (error) {
-     return { error.message }
+     return { error }
     }    
 });
 
