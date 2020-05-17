@@ -9,6 +9,10 @@ inputs:
     description: 'MeiliSearch Host Address'
     required: true
     default: ''
+  indexName:  # id of input
+    description: 'Search Index Name'
+    required: true
+    default: ''
 runs:
   using: 'node12'
   main: 'index.js'

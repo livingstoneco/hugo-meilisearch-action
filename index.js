@@ -6,7 +6,8 @@ try {
   // `who-to-greet` input defined in action metadata file
   const key = core.getInput('key');
   const host = core.getInput('host');
-  console.log(`Connecting to ${host}!`);
+  const indexName = core.getInput('indexName'); 
+  console.log(`Connecting to ${host}:${indexName}!`);
 
 } catch (error) {
   core.setFailed(error.message);
