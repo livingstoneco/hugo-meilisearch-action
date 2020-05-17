@@ -1,9 +1,12 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
+const exec = require('@actions/exec');
 const MeiliSearch = require('meilisearch');
 var fs = require('fs');
 
 ;(async () => {
+    await exec.exec('ls -la');
+
     try {
         const key = core.getInput('key')
         const host = core.getInput('host')
@@ -20,17 +23,15 @@ var fs = require('fs');
         let index = await client.listIndexes();
         index.forEach(function(item) {
             if(item.name == indexName) {
-                let posts = await client.getIndex(indexName)
+                let posts = client.getIndex(indexName)
                 posts.deleteIndex()
             }
         })
     
         index = await client.createIndex({ uid: indexName, primaryKey: 'id' })
         const searchIndex = await JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
-        core.setOutput("index", searchIndex);
         console.log(searchIndex)
         const response = await index.addDocuments(searchIndex);
-        core.setOutput("updateId", response);
         console.log(response)
     
     } catch (error) {
