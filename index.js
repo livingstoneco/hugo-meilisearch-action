@@ -4,9 +4,7 @@ const exec = require('@actions/exec');
 const MeiliSearch = require('meilisearch');
 var fs = require('fs');
 
-// ;(async () => {
-    const ls = exec.exec('ls -la docs')
-    console.log(ls)
+return = (async () => {
     try {
         const key = core.getInput('key')
         const host = core.getInput('host')
@@ -20,7 +18,7 @@ var fs = require('fs');
         })
     
         // Does index already exist, if so delete it
-        let index = client.listIndexes();
+        let index = await client.listIndexes();
         index.forEach(function(item) {
             if(item.name == indexName) {
                 let posts = client.getIndex(indexName)
@@ -28,13 +26,14 @@ var fs = require('fs');
             }
         })
     
-        index = client.createIndex({ uid: indexName, primaryKey: 'id' })
-        const searchIndex = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
-        console.log(searchIndex)
-        const response = index.addDocuments(searchIndex);
-        console.log(response)
+        index = await client.createIndex({ uid: indexName, primaryKey: 'id' })
+        const searchIndex = await JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
+        const response = await index.addDocuments(searchIndex);
+        return {searchIndex}
     
     } catch (error) {
-      core.setFailed(error.message);
+     return { error.message }
     }    
-// });
+});
+
+console.log(return);
