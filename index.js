@@ -24,10 +24,14 @@ indexes.then(function(data) {
 	})
 });
 
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
 
 ;(async () => {
-	
+	await sleep(10000);
 
 	try {
 		await client.createIndex({ uid: index.uid, primaryKey: 'id' })
