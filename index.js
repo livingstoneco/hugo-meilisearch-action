@@ -19,6 +19,7 @@ indexes.then(function(date) {
 		if(item.uid == index.uid) {
 			let posts = client.getIndex(index.uid)
 			posts.deleteIndex()
+			console.log(posts)
 		}
 	})
 });
@@ -30,12 +31,12 @@ indexes.then(function(date) {
 // ;(async () => {
 	
 	
-	all.forEach(function(item) {
-		if(item.uid == index.uid) {
-			let posts = client.getIndex(index.uid)
-			posts.deleteIndex()
-		}
-	})
+	// all.forEach(function(item) {
+	// 	if(item.uid == index.uid) {
+	// 		let posts = client.getIndex(index.uid)
+	// 		posts.deleteIndex()
+	// 	}
+	// })
 
 // 	try {
 // 		await client.createIndex(index.uid)
