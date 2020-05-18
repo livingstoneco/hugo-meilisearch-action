@@ -27,7 +27,8 @@ console.log(dataset);
             index.deleteIndex()
         }
     })
-    sleep(10000);
+
+    sleep(20000);
 
     await client.createIndex(index)
     await client.getIndex(index.uid).addDocuments(dataset)
