@@ -14,13 +14,9 @@ const index = {
 
 const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
 ;(async () => {
-    // const indexExists = await client.getIndex(index.uid) 
-    // if(indexExists !== undefined) { indexExists.deleteIndex(index.uid); }
+    const indexExists = await client.getIndex(index.uid) 
+    if(indexExists !== undefined) { indexExists.deleteIndex(index.uid); }
 
     await client.createIndex(index)
     await client.getIndex(index.uid).addDocuments(dataset)
