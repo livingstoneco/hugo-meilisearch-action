@@ -32,7 +32,7 @@ console.log(dataset);
 	
 
 	try {
-		await client.createIndex(index.uid)
+		await client.createIndex({ uid: index.uid, primaryKey: 'id' })
 	    await client.getIndex(index.uid).addDocuments(dataset)
 	} catch(e) {
 		console.log('Error:', e.stack);
