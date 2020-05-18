@@ -12,9 +12,9 @@ const index = {
   uid: core.getInput('indexName'),
 }
 
-const dataset = (async () => {
+const dataset = function() {
     return await JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
-})()
+};
 
 console.log(dataset);
 
