@@ -18,7 +18,7 @@ const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
 	const allIndexes = client.listIndexes()
 	allIndexes.forEach(function(item) {
 		if(item.name == index.uid) {
-			var index = await client.getIndex(index.uid)
+			var index = client.getIndex(index.uid)
 			index.deleteIndex();
 		}
 	})
