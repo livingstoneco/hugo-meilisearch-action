@@ -15,7 +15,12 @@ const index = {
 const indexes = client.listIndexes()
 
 indexes.then(function(date) {
-	console.log(date)
+	data.forEach(function(item) {
+		if(item.uid == index.uid) {
+			let posts = client.getIndex(index.uid)
+			posts.deleteIndex()
+		}
+	})
 });
 
 // const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
@@ -25,12 +30,12 @@ indexes.then(function(date) {
 // ;(async () => {
 	
 	
-// 	all.forEach(function(item) {
-// 		if(item.uid == index.uid) {
-// 			let posts = client.getIndex(index.uid)
-// 			posts.deleteIndex()
-// 		}
-// 	})
+	all.forEach(function(item) {
+		if(item.uid == index.uid) {
+			let posts = client.getIndex(index.uid)
+			posts.deleteIndex()
+		}
+	})
 
 // 	try {
 // 		await client.createIndex(index.uid)
