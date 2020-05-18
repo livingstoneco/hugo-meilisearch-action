@@ -12,7 +12,9 @@ const index = {
   uid: core.getInput('indexName'),
 }
 
-let all = client.listIndexes();
+const all = (async () => {
+ return client.listIndexes()
+})()
 
 const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
 
