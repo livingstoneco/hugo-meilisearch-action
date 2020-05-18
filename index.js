@@ -24,21 +24,21 @@ indexes.then(function(data) {
 	})
 });
 
-// const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
+const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
 
-// console.log(dataset);
+console.log(dataset);
 
-// ;(async () => {
+;(async () => {
 	
 
-// 	try {
-// 		await client.createIndex({ uid: index.uid, primaryKey: 'id' })
-// 	    await client.getIndex(index.uid).addDocuments(dataset)
-// 	} catch(e) {
-// 		console.log('Error:', e.stack);
-// 	}
+	try {
+		await client.createIndex({ uid: index.uid, primaryKey: 'id' })
+	    await client.getIndex(index.uid).addDocuments(dataset)
+	} catch(e) {
+		console.log('Error:', e.stack);
+	}
 
     
-// })()
+})()
 
 
