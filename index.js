@@ -16,17 +16,16 @@ const indexes = client.listIndexes()
 
 indexes.then(function(data) {
 	data.forEach(function(item) {
-		if(item.uid === index.uid) {
-			let posts = client.getIndex(item.uid)
-			posts.deleteIndex()
-			console.log(`Deleted Index: ${item.uid}`)
-		}
+		console.log(`Index: ${item.uid}`)
+		// if(item.uid === index.uid) {
+		// 	let posts = client.getIndex(item.uid)
+		// 	posts.deleteIndex()
+			
+		// }
 	})
 });
 
 const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
-
-console.log(dataset);
 
 ;(async () => {
 	
