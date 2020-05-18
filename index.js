@@ -16,12 +16,11 @@ const indexes = client.listIndexes()
 
 indexes.then(function(data) {
 	data.forEach(function(item) {
-		console.log(`Index: ${item.uid}`)
-		// if(item.uid === index.uid) {
-		// 	let posts = client.getIndex(item.uid)
-		// 	posts.deleteIndex()
+		if(item.uid === index.uid) {
+			let posts = client.getIndex(item.uid)
+			posts.deleteIndex()
 			
-		// }
+		}
 	})
 });
 
