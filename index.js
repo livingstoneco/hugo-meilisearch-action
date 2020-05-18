@@ -24,28 +24,19 @@ indexes.then(function(date) {
 	})
 });
 
-// const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
+const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
 
-
-
-// ;(async () => {
+;(async () => {
 	
-	
-	// all.forEach(function(item) {
-	// 	if(item.uid == index.uid) {
-	// 		let posts = client.getIndex(index.uid)
-	// 		posts.deleteIndex()
-	// 	}
-	// })
 
-// 	try {
-// 		await client.createIndex(index.uid)
-// 	    await client.getIndex(index.uid).addDocuments(dataset)
-// 	} catch(e) {
-// 		console.log('Error:', e.stack);
-// 	}
+	try {
+		await client.createIndex(index.uid)
+	    await client.getIndex(index.uid).addDocuments(dataset)
+	} catch(e) {
+		console.log('Error:', e.stack);
+	}
 
     
-// })()
+})()
 
 
