@@ -17,28 +17,28 @@ const indexes = client.listIndexes()
 indexes.then(function(data) {
 	data.forEach(function(item) {
 		if(item.uid == index.uid) {
-			let posts = client.getIndex(index)
+			let posts = client.getIndex(index.uid)
 			posts.deleteIndex()
-			console.log(`Deleted Index: ${posts.uid}`)
+			console.log(`Deleted Index: ${posts}`)
 		}
 	})
 });
 
-const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
+// const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
 
-console.log(dataset);
+// console.log(dataset);
 
-;(async () => {
+// ;(async () => {
 	
 
-	try {
-		await client.createIndex({ uid: index.uid, primaryKey: 'id' })
-	    await client.getIndex(index.uid).addDocuments(dataset)
-	} catch(e) {
-		console.log('Error:', e.stack);
-	}
+// 	try {
+// 		await client.createIndex({ uid: index.uid, primaryKey: 'id' })
+// 	    await client.getIndex(index.uid).addDocuments(dataset)
+// 	} catch(e) {
+// 		console.log('Error:', e.stack);
+// 	}
 
     
-})()
+// })()
 
 
