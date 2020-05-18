@@ -19,8 +19,8 @@ function sleep(ms) {
 }
 
 ;(async () => {
-    const indexExists = await client.getIndex(index.uid) 
-    if(indexExists !== undefined) { indexExists.deleteIndex(index.uid); }
+    // const indexExists = await client.getIndex(index.uid) 
+    // if(indexExists !== undefined) { indexExists.deleteIndex(index.uid); }
 
     await client.createIndex(index)
     await client.getIndex(index.uid).addDocuments(dataset)
