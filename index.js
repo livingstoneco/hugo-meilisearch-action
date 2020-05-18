@@ -14,7 +14,7 @@ const index = {
 
 const indexes = client.listIndexes()
 
-indexes.then(function(date) {
+indexes.then(function(data) {
 	data.forEach(function(item) {
 		if(item.uid == index.uid) {
 			let posts = client.getIndex(index.uid)
@@ -28,17 +28,17 @@ const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
 
 console.log(dataset);
 
-// ;(async () => {
+;(async () => {
 	
 
-// 	try {
-// 		await client.createIndex(index.uid)
-// 	    await client.getIndex(index.uid).addDocuments(dataset)
-// 	} catch(e) {
-// 		console.log('Error:', e.stack);
-// 	}
+	try {
+		await client.createIndex(index.uid)
+	    await client.getIndex(index.uid).addDocuments(dataset)
+	} catch(e) {
+		console.log('Error:', e.stack);
+	}
 
     
-// })()
+})()
 
 
