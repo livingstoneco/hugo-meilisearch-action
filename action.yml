@@ -1,7 +1,8 @@
 name: 'Deploy Search Index'
 description: 'Deploy Hugo Search Index to MeiliSearch Instance'
-icon: box
-color: red
+branding:
+  icon: box
+  color: red
 inputs:
   key:  # id of input
     description: 'MeiliSearch Private API Key'
