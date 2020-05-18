@@ -13,7 +13,7 @@ const index = {
 }
 
 const dataset = function() {
-    return await JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
+    return JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
 };
 
 console.log(dataset);
