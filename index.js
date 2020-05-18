@@ -31,7 +31,7 @@ function sleep(ms) {
 const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
 
 ;(async () => {
-	await sleep(10000);
+	await sleep(2000);
 
 	try {
 		await client.createIndex({ uid: index.uid, primaryKey: 'id' })
