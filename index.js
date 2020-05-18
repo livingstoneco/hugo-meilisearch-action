@@ -13,7 +13,7 @@ const index = {
 }
 
 const all = (async () => {
- return client.listIndexes()
+ return await client.listIndexes()
 })()
 
 const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
