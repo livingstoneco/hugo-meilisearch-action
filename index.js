@@ -12,28 +12,32 @@ const index = {
   uid: core.getInput('indexName'),
 }
 
+let all = client.listIndexes();
+
 const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
 
 console.log(dataset);
+console.log('--------');
+console.log(all);
 
-// ;(async () => {
+;(async () => {
 	
-// 	let all = await client.listIndexes();
-// 	all.forEach(function(item) {
-// 		if(item.uid == index.uid) {
-// 			let posts = client.getIndex(index.uid)
-// 			posts.deleteIndex()
-// 		}
-// 	})
+	
+	all.forEach(function(item) {
+		if(item.uid == index.uid) {
+			let posts = client.getIndex(index.uid)
+			posts.deleteIndex()
+		}
+	})
 
-// 	try {
-// 		await client.createIndex(index.uid)
-// 	    await client.getIndex(index.uid).addDocuments(dataset)
-// 	} catch(e) {
-// 		console.log('Error:', e.stack);
-// 	}
+	try {
+		await client.createIndex(index.uid)
+	    await client.getIndex(index.uid).addDocuments(dataset)
+	} catch(e) {
+		console.log('Error:', e.stack);
+	}
 
     
-// })()
+})()
 
 
