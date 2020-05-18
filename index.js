@@ -17,6 +17,13 @@ const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
 console.log(dataset);
 
 ;(async () => {
+    index.forEach(function(item) {
+        if(item.name == index.uid) {
+            let index = await client.getIndex(indexName)
+            index.deleteIndex()
+        }
+    })
+
     await client.createIndex(index)
     await client.getIndex(index.uid).addDocuments(dataset)
 })()
