@@ -71,6 +71,8 @@ jobs:
         indexName: posts
 ```
 
-TODO: add api key and host to github secrets
+### 3. Define Secrets
+TODO: create screenshots outlining how to define repo secrets
+TODO: meilisearch api key and host must be defined as a secret
 
 
