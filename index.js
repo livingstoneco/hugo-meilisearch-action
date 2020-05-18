@@ -18,8 +18,6 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-console.log(dataset);
-
 ;(async () => {
     await client.createIndex(index)
     await client.getIndex(index.uid).addDocuments(dataset)
