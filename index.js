@@ -20,7 +20,7 @@ indexes.then(function(date) {
 
 // const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
 
-console.log(all);
+
 
 // ;(async () => {
 	
