@@ -12,11 +12,13 @@ const index = {
   uid: core.getInput('indexName'),
 }
 
-const all = (async () => {
- return await client.listIndexes()
-})()
+const indexes = client.listIndexes()
 
-const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
+indexes.then(function(date) {
+	console.log(date)
+});
+
+// const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
 
 console.log(all);
 
