@@ -19,7 +19,7 @@ indexes.then(function(data) {
 		if(item.uid == index.uid) {
 			let posts = client.getIndex(index.uid)
 			posts.deleteIndex()
-			console.log(`Deleted Index: ${posts}`)
+			console.log(`Deleted Index: ${item.uid}`)
 		}
 	})
 });
