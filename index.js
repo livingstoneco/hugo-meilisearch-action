@@ -14,24 +14,26 @@ const index = {
 
 const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
 
-;(async () => {
-	
-	let all = await client.listIndexes();
-	all.forEach(function(item) {
-		if(item.uid == index.uid) {
-			let posts = client.getIndex(index.uid)
-			posts.deleteIndex()
-		}
-	})
+console.log(dataset);
 
-	try {
-		await client.createIndex(index.uid)
-	    await client.getIndex(index.uid).addDocuments(dataset)
-	} catch(e) {
-		console.log('Error:', e.stack);
-	}
+// ;(async () => {
+	
+// 	let all = await client.listIndexes();
+// 	all.forEach(function(item) {
+// 		if(item.uid == index.uid) {
+// 			let posts = client.getIndex(index.uid)
+// 			posts.deleteIndex()
+// 		}
+// 	})
+
+// 	try {
+// 		await client.createIndex(index.uid)
+// 	    await client.getIndex(index.uid).addDocuments(dataset)
+// 	} catch(e) {
+// 		console.log('Error:', e.stack);
+// 	}
 
     
-})()
+// })()
 
 
