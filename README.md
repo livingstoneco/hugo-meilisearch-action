@@ -8,7 +8,7 @@ This GitHub action generates a search index for your Hugo blog and import genera
 
 ### 1. Create Search Index
 
-Define a new output format named “SearchIndex”
+Define a new output format named “SearchIndex” in Hugo config file `config.yaml`
 
 ```
 outputFormats:
