@@ -32,6 +32,39 @@ Create "SearchIndex" output format template in `layouts/_default/list.searchinde
 {{- $.Scratch.Get "searchindex" | jsonify -}}
 ```
 
-### 2.
+### 2. Create GitHub Workflow
+
+Define your workflow `.github/workflows/deploySearchIndex.yml`
+
+```
+on: [push]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    name: Deploy Search Index to MeiliSearch
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: '0.68.3'
+        extended: true
+    - name: Build Hugo Blog
+      run: hugo
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+    - name: Deploy Search Index to MeiliSearch Instance
+      uses: livingstoneco/hugo-meilisearch-action@v1.66
+      with:
+        key: ${{ secrets.searchApiToken }}
+        host: ${{ secrets.searchApiHost }}
+        indexName: posts
+```
+
+TODO: add api key and host to github secrets
 
 
