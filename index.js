@@ -21,27 +21,8 @@ function sleep(ms) {
 console.log(dataset);
 
 ;(async () => {
-    index.forEach(function(item) {
-        if(item.name == index.uid) {
-            let index = client.getIndex(index.uid)
-            index.deleteIndex()
-        }
-    })
-
-    sleep(20000);
-
     await client.createIndex(index)
     await client.getIndex(index.uid).addDocuments(dataset)
 })()
 
-;(async () => {
-    index.forEach(function(item) {
-        if(item.name == index.uid) {
-            let index = client.getIndex(indexName)
-            index.deleteIndex()
-        }
-    })
 
-    await client.createIndex(index)
-    await client.getIndex(index.uid).addDocuments(dataset)
-})()
