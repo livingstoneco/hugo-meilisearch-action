@@ -19,7 +19,7 @@ console.log(dataset);
 ;(async () => {
     index.forEach(function(item) {
         if(item.name == index.uid) {
-            let index = await client.getIndex(indexName)
+            let index = client.getIndex(indexName)
             index.deleteIndex()
         }
     })
