@@ -18,8 +18,6 @@ const all = (async () => {
 
 const dataset = JSON.parse(fs.readFileSync('./docs/searchindex.json', 'utf8'));
 
-console.log(dataset);
-console.log('--------');
 console.log(all);
 
 ;(async () => {
