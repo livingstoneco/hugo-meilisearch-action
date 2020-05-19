@@ -12,6 +12,10 @@ This GitHub action generates a search index for your Hugo blog and import genera
 
 [MeiliSearch](https://www.meilisearch.com/) is a RESTful search API. It aims to be a ready-to-go solution for everyone who wants a fast and relevant search experience for their end-users ⚡️🔎
 
+## Table of Contents
+* [Setup](#setup)
+* [Todo](#TODO)
+
 ## Setup
 
 ### 1. Create Search Index
@@ -77,7 +81,7 @@ jobs:
 
 ## TODO
 
-- [ ] Create table of contents
+- [x] Create table of contents
 
 - [ ] Create screenshots illustrating where and how to define secrets
 
