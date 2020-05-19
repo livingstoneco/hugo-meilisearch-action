@@ -1,10 +1,10 @@
 # Hugo to MeiliSearch
 
-[![Github All Releases](https://img.shields.io/github/stars/livingstoneco/hugo-meilisearch-action?style=for-the-badge)]()
-[![Github All Releases](https://img.shields.io/github/downloads/livingstoneco/hugo-meilisearch-action/total?style=for-the-badge)]()
-[![Github All Releases](https://img.shields.io/github/v/release/livingstoneco/hugo-meilisearch-action?style=for-the-badge)]()
-[![Github All Releases](https://img.shields.io/github/last-commit/livingstoneco/hugo-meilisearch-action?style=for-the-badge)]()
-![GitHub](https://img.shields.io/github/license/livingstoneco/hugo-meilisearch-action?style=for-the-badge)
+[![Github Total Stars](https://img.shields.io/github/stars/livingstoneco/hugo-meilisearch-action?style=for-the-badge)]()
+[![Total Downloads](https://img.shields.io/github/downloads/livingstoneco/hugo-meilisearch-action/total?style=for-the-badge)]()
+[![Latest Release](https://img.shields.io/github/v/release/livingstoneco/hugo-meilisearch-action?style=for-the-badge)]()
+[![Last Commit](https://img.shields.io/github/last-commit/livingstoneco/hugo-meilisearch-action?style=for-the-badge)]()
+![License](https://img.shields.io/github/license/livingstoneco/hugo-meilisearch-action?style=for-the-badge)
 
 
 
