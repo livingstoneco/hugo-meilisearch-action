@@ -4,6 +4,8 @@
 [![Github All Releases](https://img.shields.io/github/downloads/livingstoneco/hugo-meilisearch-action/total?style=for-the-badge)]()
 [![Github All Releases](https://img.shields.io/github/v/release/livingstoneco/hugo-meilisearch-action?style=for-the-badge)]()
 [![Github All Releases](https://img.shields.io/github/last-commit/livingstoneco/hugo-meilisearch-action?style=for-the-badge)]()
+![GitHub](https://img.shields.io/github/license/livingstoneco/hugo-meilisearch-action?style=for-the-badge)
+
 
 
 This GitHub action generates a search index for your Hugo blog and import generated index to MeiliSearch instance.
