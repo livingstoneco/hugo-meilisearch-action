@@ -73,6 +73,9 @@ jobs:
 
 ### 3. Define Secrets
 TODO: create screenshots outlining how to define repo secrets
+
 TODO: meilisearch api key and host must be defined as a secret
+
+TODO: more emojis
 
 
