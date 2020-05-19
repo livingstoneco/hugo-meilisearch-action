@@ -81,7 +81,7 @@ jobs:
 
 ## TODO
 
-- [x] Create table of contents
+- [x] ~~Create table of contents~~
 
 - [ ] Create screenshots illustrating where and how to define secrets
 
