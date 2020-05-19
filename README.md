@@ -74,10 +74,17 @@ jobs:
 ```
 
 ### 3. Define Secrets
-TODO: create screenshots outlining how to define repo secrets
 
-TODO: meilisearch api key and host must be defined as a secret
+## TODO
 
-TODO: more emojis
+- [ ] Create table of contents
+
+- [ ] Create screenshots illustrating where and how to define secrets
+
+- [ ] Allow user to specify path to built search index
+
+- [ ] More emojis
+
+- [ ] Add links to each badge
 
 
