@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/livingstoneco/hugo-meilisearch-action#readme",
   "dependencies": {
-    "@actions/core": "^1.2.4",
+    "@actions/core": "^1.2.6",
     "meilisearch": "^0.10.0"
   }
 }
